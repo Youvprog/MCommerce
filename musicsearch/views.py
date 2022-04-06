@@ -45,8 +45,9 @@ def search(request):
              ApiUrl = 'https://itunes.apple.com/search?term='
              FinalApi = ApiUrl + searched2 + '&limit=10'
              response = requests.get(FinalApi)
-             content = response.json()
-             Allresult = content["results"]
+             if (response.status_code == 200):
+                  content = response.json()
+                  Allresult = content["results"]
            
          else:
             searched = 'there has been an error'
