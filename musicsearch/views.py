@@ -57,3 +57,7 @@ def search(request):
         "result": searched,
         "context": Allresult
     })
+
+
+def cart(request):
+    return render(request,'musicsearch/shop_cart.html')
