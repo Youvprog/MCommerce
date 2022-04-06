@@ -1,17 +1,23 @@
 {% extends 'base_template.html' %}
+{% load static%}
 
 {% block page_title %}
 Register 
 {% endblock  %}
-
+{%block css_file%}
+<link rel="stylesheet" href="{% static "userlog/register.css" %}">
+{%endblock%}
 
 {% block body_content %}
-
+<div class ="container">
+  <h1>Create new Account</h1>
 <form method="POST">
     {% csrf_token %}
   {{form1.as_p}}
   {{form2.as_p}}
   <button>REGISTER</button>
-</form>
 
+  <p>Already have an account ? log <a href="{% url 'login'%}">HERE</a></p>
+</form>
+</div>
 {% endblock  %}

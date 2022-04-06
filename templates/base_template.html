@@ -23,7 +23,7 @@
           {% else %}
           <li><a href="{% url 'login' %}">Login</a></li>
           {% endif%}
-          <li><a href=""><i class='bx bx-cart' ></i></a></li>
+          <li><a href="{% url 'cart' %}"><i class='bx bx-cart' ></i></a></li>
         </ul>
       </nav>
     {%block body_content %}  

@@ -1,17 +1,21 @@
 {% extends 'base_template.html'%}
+{%load static%}
   
 {%block page_title%} Home {%endblock%}
+{%block css_file%}
+<link rel="stylesheet" href="{% static "musicsearch/home.css" %}">
+{%endblock%}
 
 {%block body_content%}
+ <div class ="container">
   <h1>Searching Area</h1>
-      
+
           <form method="POST" action="{% url 'search'%}">
               {% csrf_token %}
-            <input type="submit">
-            <input type="search" name="query">
-
+            <input type="submit" class ="searchButton">
+            <input type="search" name="query"  class ="search-input">
           </form>
-          
+   </div>
 
     
 {%endblock%}

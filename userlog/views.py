@@ -29,7 +29,7 @@ class CustomerLogin(LoginView):
     fields = '__all__'
 
     def get_success_url(self):
-        return reverse_lazy('index')
+        return reverse_lazy('home')
 
 def index(request):
     return render(request,'userlog/index.html')
