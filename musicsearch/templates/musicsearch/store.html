@@ -1,0 +1,24 @@
+{% extends 'base_template.html' %}
+
+{% block page_title %}
+{% endblock  %}
+
+{% block css_file %}
+{% endblock  %}
+
+{% block body_content %}
+
+<h1>music cards</h1>
+{% if songTitle%}
+
+<ul>
+    <li><img src="{{songImag}}" alt=""></li>
+    <li>{{songTitle}}</li>
+    <li>{{albumName}}</li>
+    <li>{{singer}}</li>
+</ul>
+
+{%else%}
+
+{%endif%}
+{% endblock  %}

@@ -1,0 +1,17 @@
+{% extends 'base_template.html' %}
+
+{% block page_title %}
+Register 
+{% endblock  %}
+
+
+{% block body_content %}
+
+<form method="POST">
+    {% csrf_token %}
+  {{form1.as_p}}
+  {{form2.as_p}}
+  <button>REGISTER</button>
+</form>
+
+{% endblock  %}

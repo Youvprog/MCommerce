@@ -1,0 +1,32 @@
+{% extends 'base_template.html' %}
+{%load static%}
+
+{% block page_title %}
+Result
+{% endblock  %}
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static "musicsearch/result.css" %}">
+{% endblock  %}
+
+{% block body_content %}
+
+<h1>{{result}}</h1>
+
+   <div class= "container">
+    {%for item in context%}
+    <ul>
+        <li><img src="{{item.artworkUrl100}}" alt=""></li>
+        <li>{{item.trackName}}</li>
+        <li>{{item.collectionName}}</li>
+        <li>{{item.artistName}}</li>
+        <li> <a href="">ADD to Cart</a> </li>
+        <li><a href="">View</a> </li>
+    </ul>
+
+    {% endfor %}
+</div>
+   
+
+
+{% endblock  %}
